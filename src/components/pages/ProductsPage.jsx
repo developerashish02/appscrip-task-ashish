@@ -25,7 +25,6 @@ const ProductsPage = () => {
       <main className="p-4">
         <div className="container mx-auto">
           <div className="flex justify-between items-center mb-4">
-            {/* Sidebar Toggle Button */}
             <button
               onClick={() => dispatch(toggleSidebar())}
               className="bg-gray-200 text-black p-2 rounded-lg flex items-center hover:bg-gray-300 transition duration-200"
@@ -41,9 +40,8 @@ const ProductsPage = () => {
               )}
             </button>
 
-            {/* Centered Product Count */}
             <h2 className="text-lg font-semibold text-gray-800 text-center flex-grow">
-              {products.length} Products Found
+              ({products?.length}) ITEMS
             </h2>
 
             <SortSelect sortOrder={sortOrder} onSortChange={handleSortChange} />

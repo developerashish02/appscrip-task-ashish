@@ -1,17 +1,25 @@
-# Order Easy
+## Demo
 
+Check out the live demo of the application at: [appscrip-ashish-demo](https://appscrip-ashish.netlify.app)
 
-## How to Use
+## Installation
 
-1. Clone the repository:
+To get started with the project, follow these steps:
+
+1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/developerashish02/Quick-Pick-Metamind
+   git clone https://github.com/developerashish02/appscrip-task-ashish.git
    ```
 
-2.npm install
+2. **Install Pancakes**
 
-3. npm run dev
+   ```bash
+   npm install
+   ```
 
-`Quick Pick` 
-checkout  - `https://quick-pick-metamind.netlify.app/`
+3. **start server**
+
+   ```bash
+   npm run dev
+   ```

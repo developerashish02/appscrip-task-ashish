@@ -1,5 +1,3 @@
-import React from "react";
-
 const SortSelect = ({ sortOrder, onSortChange }) => {
   return (
     <div className="flex items-center justify-end  font-poppins">
