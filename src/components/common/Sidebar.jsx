@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Sidebar = () => {
   const [openSections, setOpenSections] = useState({
@@ -83,7 +83,6 @@ const Sidebar = () => {
           )}
         </div>
 
-        {/* Occasion Section */}
         <div>
           <h3
             className="font-medium text-lg mb-2 cursor-pointer flex justify-between items-center"
@@ -111,7 +110,6 @@ const Sidebar = () => {
           )}
         </div>
 
-        {/* Work Section */}
         <div>
           <h3
             className="font-medium text-lg mb-2 cursor-pointer flex justify-between items-center"
@@ -136,7 +134,6 @@ const Sidebar = () => {
           )}
         </div>
 
-        {/* Fabric Section */}
         <div>
           <h3
             className="font-medium text-lg mb-2 cursor-pointer flex justify-between items-center"
@@ -163,8 +160,6 @@ const Sidebar = () => {
             </ul>
           )}
         </div>
-
-        {/* Add other sections similarly... */}
       </div>
     </aside>
   );
