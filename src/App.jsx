@@ -9,24 +9,26 @@ const App = () => {
 
   return (
     <div className="flex flex-col">
-      <main className="w-full p-6 sm:p-12 md:p-24 ">
+      <main className="w-full p-6 sm:p-12 md:p-24">
         <DiscoverProducts />
       </main>
 
-      <div
-        className={`grid grid-cols-1 lg:grid-cols-[250px,1fr] lg:h-screen overflow-hidden`}
-      >
+      <div className="lg:flex lg:h-screen lg:overflow-hidden">
         <aside
-          className={`hidden lg:block lg:w-40 lg:h-full lg:sticky lg:top-0 lg:text-white lg:p-4 ${
-            isVisible ? "block" : "hidden"
+          className={`transition-all duration-300 lg:sticky lg:top-0 lg:h-full lg:text-white lg:p-4 ${
+            isVisible ? "lg:w-64" : "lg:w-0 lg:p-0"
           }`}
+          style={{
+            overflow: "hidden",
+          }}
         >
           <Sidebar />
         </aside>
+
         <section
-          className={`flex-1 p-6 sm:p-12 overflow-y-auto lg:h-screen ${
-            isVisible ? "" : "lg:w-full"
-          }`}
+          className={`flex-1 p-6 sm:p-12 overflow-y-auto transition-all duration-300 ${
+            isVisible ? "lg:w-[calc(100%-16rem)]" : "lg:w-full"
+          } lg:h-screen`}
         >
           <ProductsPage />
         </section>

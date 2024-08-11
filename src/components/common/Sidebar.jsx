@@ -36,7 +36,6 @@ const Sidebar = () => {
     <aside className="lg:w-64 lg:bg-white lg:text-gray-800 lg:p-4 lg:sticky lg:top-24 lg:h-screen lg:overflow-y-auto lg:overflow-hidden">
       <h2 className="text-xl font-semibold mb-4">Filters</h2>
       <div className="space-y-4">
-        {/* Customizable Section */}
         <div>
           <h3
             className="font-medium text-lg mb-2 cursor-pointer flex justify-between items-center"
