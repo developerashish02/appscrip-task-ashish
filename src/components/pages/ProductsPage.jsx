@@ -21,25 +21,32 @@ const ProductsPage = () => {
   }
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 min-h-screen font-poppins">
       <main className="p-4">
         <div className="container mx-auto">
-          <div className="flex justify-between">
-            <div className="mb-4">
-              <button
-                onClick={() => dispatch(toggleSidebar())}
-                className="bg-gray-200 text-black p-2 rounded-lg mb-4"
-              >
-                {isVisible ? "Hide Filters" : "Show Filters"}
-              </button>
-            </div>
+          <div className="flex justify-between items-center mb-4">
+            {/* Sidebar Toggle Button */}
+            <button
+              onClick={() => dispatch(toggleSidebar())}
+              className="bg-gray-200 text-black p-2 rounded-lg flex items-center hover:bg-gray-300 transition duration-200"
+            >
+              {isVisible ? (
+                <>
+                  <i className="fa-solid fa-arrow-left mr-2"></i> Hide Filters
+                </>
+              ) : (
+                <>
+                  <i className="fa-solid fa-arrow-right mr-2"></i> Show Filters
+                </>
+              )}
+            </button>
 
-            <div className=" mb-4">
-              <SortSelect
-                sortOrder={sortOrder}
-                onSortChange={handleSortChange}
-              />
-            </div>
+            {/* Centered Product Count */}
+            <h2 className="text-lg font-semibold text-gray-800 text-center flex-grow">
+              {products.length} Products Found
+            </h2>
+
+            <SortSelect sortOrder={sortOrder} onSortChange={handleSortChange} />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

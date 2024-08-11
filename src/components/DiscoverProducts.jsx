@@ -1,8 +1,8 @@
 export default function DiscoverProducts() {
   return (
-    <section className="flex justify-center text-center ">
-      <div>
-        <h1 className="text-3xl sm:text-4xl font-bold mb-4 uppercase">
+    <section className="flex flex-col items-center text-center font-poppins p-4">
+      <div className="w-full max-w-md">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-4 uppercase text-gray-900">
           Discover Our Products
         </h1>
         <p className="text-base sm:text-lg text-gray-700">

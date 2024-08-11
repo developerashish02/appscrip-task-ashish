@@ -24,7 +24,7 @@ const Sidebar = () => {
 
   const renderCheckboxes = (items) =>
     items.map(({ label, count }, index) => (
-      <li key={index}>
+      <li key={index} className="flex items-center">
         <input type="checkbox" id={label} className="mr-2" />
         <label htmlFor={label} className="text-gray-800">
           {label} {count !== undefined ? `(${count})` : ""}
@@ -33,12 +33,12 @@ const Sidebar = () => {
     ));
 
   return (
-    <aside className="lg:w-64 lg:bg-white lg:text-gray-800 lg:p-4 lg:sticky lg:top-24 lg:h-screen lg:overflow-y-auto lg:overflow-hidden">
+    <aside className="lg:w-64 bg-white text-gray-800 p-4 lg:sticky lg:top-24 lg:h-screen lg:overflow-y-auto shadow-lg font-poppins">
       <h2 className="text-xl font-semibold mb-4">Filters</h2>
       <div className="space-y-4">
         <div>
           <h3
-            className="font-medium text-lg mb-2 cursor-pointer flex justify-between items-center"
+            className="font-medium text-lg mb-2 cursor-pointer flex justify-between items-center hover:text-blue-600 transition duration-200"
             onClick={() => toggleSection("customizable")}
           >
             Customizable
@@ -51,16 +51,15 @@ const Sidebar = () => {
             </span>
           </h3>
           {openSections.customizable && (
-            <ul className="space-y-2">
+            <ul className="space-y-2 pl-4">
               {renderCheckboxes([{ label: "Option 1" }, { label: "Option 2" }])}
             </ul>
           )}
         </div>
 
-        {/* Ideal For Section */}
         <div>
           <h3
-            className="font-medium text-lg mb-2 cursor-pointer flex justify-between items-center"
+            className="font-medium text-lg mb-2 cursor-pointer flex justify-between items-center hover:text-blue-600 transition duration-200"
             onClick={() => toggleSection("idealFor")}
           >
             IDEAL FOR
@@ -73,7 +72,7 @@ const Sidebar = () => {
             </span>
           </h3>
           {openSections.idealFor && (
-            <ul className="space-y-2">
+            <ul className="space-y-2 pl-4">
               {renderCheckboxes([
                 { label: "Men", count: 65 },
                 { label: "Women", count: 63 },
@@ -84,7 +83,7 @@ const Sidebar = () => {
 
         <div>
           <h3
-            className="font-medium text-lg mb-2 cursor-pointer flex justify-between items-center"
+            className="font-medium text-lg mb-2 cursor-pointer flex justify-between items-center hover:text-blue-600 transition duration-200"
             onClick={() => toggleSection("occasion")}
           >
             Occasion
@@ -97,7 +96,7 @@ const Sidebar = () => {
             </span>
           </h3>
           {openSections.occasion && (
-            <ul className="space-y-2">
+            <ul className="space-y-2 pl-4">
               {renderCheckboxes([
                 { label: "Baby & Kids", count: 59 },
                 { label: "Rainy Season", count: 1 },
@@ -111,7 +110,7 @@ const Sidebar = () => {
 
         <div>
           <h3
-            className="font-medium text-lg mb-2 cursor-pointer flex justify-between items-center"
+            className="font-medium text-lg mb-2 cursor-pointer flex justify-between items-center hover:text-blue-600 transition duration-200"
             onClick={() => toggleSection("work")}
           >
             Work
@@ -124,7 +123,7 @@ const Sidebar = () => {
             </span>
           </h3>
           {openSections.work && (
-            <ul className="space-y-2">
+            <ul className="space-y-2 pl-4">
               {renderCheckboxes([
                 { label: "French Knot", count: 2 },
                 { label: "Zardosi", count: 2 },
@@ -135,7 +134,7 @@ const Sidebar = () => {
 
         <div>
           <h3
-            className="font-medium text-lg mb-2 cursor-pointer flex justify-between items-center"
+            className="font-medium text-lg mb-2 cursor-pointer flex justify-between items-center hover:text-blue-600 transition duration-200"
             onClick={() => toggleSection("fabric")}
           >
             Fabric
@@ -148,7 +147,7 @@ const Sidebar = () => {
             </span>
           </h3>
           {openSections.fabric && (
-            <ul className="space-y-2">
+            <ul className="space-y-2 pl-4">
               {renderCheckboxes([
                 { label: "Regular", count: 2 },
                 { label: "Fancy", count: 1 },
