@@ -12,7 +12,7 @@ To get started with the project, follow these steps:
    git clone https://github.com/developerashish02/appscrip-task-ashish.git
    ```
 
-2. **Install Pancakes**
+2. **Install packages**
 
    ```bash
    npm install
