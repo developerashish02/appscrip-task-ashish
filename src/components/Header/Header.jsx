@@ -51,11 +51,9 @@ const Header = () => {
             </button>
 
             <Link to="/" className="flex items-center">
-              <img
-                src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
-                className="h-12"
-                alt="Brand Logo"
-              />
+              <span className="text-2xl font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 dark:from-green-400 dark:to-yellow-500">
+                Appscrip
+              </span>
             </Link>
 
             <div className="hidden lg:flex space-x-4 text-gray-500 items-center">
