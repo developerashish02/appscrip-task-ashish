@@ -9,6 +9,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import {
+  FaShoppingCart,
+  FaTools,
+  FaGem,
+  FaMale,
+  FaFemale,
+} from "react-icons/fa";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +31,7 @@ const Header = () => {
 
       <meta name="description" content="Your page description here." />
 
-      <header className="shadow sticky z-50 top-0 bg-white">
+      <header className="shadow sticky z-50 top-0 bg-[#FFFFFF]">
         <nav className="px-4 lg:px-6 py-2.5 relative">
           <div className="flex items-center justify-between mx-auto max-w-screen-xl">
             <button
@@ -87,43 +94,48 @@ const Header = () => {
             id="mobile-menu"
           >
             <ul className="flex flex-col font-medium space-y-2 lg:space-y-0 lg:flex-row lg:space-x-8 text-center uppercase">
-              <li className="font-bold">
+              <li className="font-bold flex items-center">
                 <Link
                   to="/"
-                  className="block py-2 px-4 duration-200 border-b border-gray-100 hover:bg-gray-50 hover:text-orange-700"
+                  className="flex items-center block py-2 px-4 duration-200 border-b border-gray-100 hover:bg-gray-50 hover:text-orange-700"
                 >
+                  <FaShoppingCart className="mr-2 text-lg text-transparent stroke-current stroke-2" />{" "}
                   SHOP
                 </Link>
               </li>
-              <li className="font-bold">
+              <li className="font-bold flex items-center">
                 <Link
                   to="/electronics"
-                  className="block py-2 px-4 duration-200 border-b border-gray-100 hover:bg-gray-50 hover:text-orange-700"
+                  className="flex items-center block py-2 px-4 duration-200 border-b border-gray-100 hover:bg-gray-50 hover:text-orange-700"
                 >
+                  <FaTools className="mr-2 text-lg text-transparent stroke-current stroke-2" />{" "}
                   SKILLS
                 </Link>
               </li>
-              <li className="font-bold">
+              <li className="font-bold flex items-center">
                 <Link
                   to="/jewelry"
-                  className="block py-2 px-4 duration-200 border-b border-gray-100 hover:bg-gray-50 hover:text-orange-700"
+                  className="flex items-center block py-2 px-4 duration-200 border-b border-gray-100 hover:bg-gray-50 hover:text-orange-700"
                 >
+                  <FaGem className="mr-2 text-lg text-transparent stroke-current stroke-2" />{" "}
                   Jewelry
                 </Link>
               </li>
-              <li className="font-bold">
+              <li className="font-bold flex items-center">
                 <Link
                   to="/men"
-                  className="block py-2 px-4 duration-200 border-b border-gray-100 hover:bg-gray-50 hover:text-orange-700"
+                  className="flex items-center block py-2 px-4 duration-200 border-b border-gray-100 hover:bg-gray-50 hover:text-orange-700"
                 >
+                  <FaMale className="mr-2 text-lg text-transparent stroke-current stroke-2" />{" "}
                   Men's Clothing
                 </Link>
               </li>
-              <li className="font-bold">
+              <li className="font-bold flex items-center">
                 <Link
                   to="/women"
-                  className="block py-2 px-4 duration-200 border-b border-gray-100 hover:bg-gray-50 hover:text-orange-700"
+                  className="flex items-center block py-2 px-4 duration-200 border-b border-gray-100 hover:bg-gray-50 hover:text-orange-700"
                 >
+                  <FaFemale className="mr-2 text-lg text-transparent stroke-current stroke-2" />{" "}
                   Women's Clothing
                 </Link>
               </li>
