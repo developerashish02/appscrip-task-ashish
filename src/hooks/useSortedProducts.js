@@ -5,14 +5,27 @@ const useSortedProducts = (products) => {
   const [sortOrder, setSortOrder] = useState("lowToHigh");
   const filters = useSelector((state) => state.sidebar.filters);
 
+  console.log(products, "products");
+
   const filteredProducts = useMemo(() => {
     return products.filter((product) => {
       return Object.keys(filters).every((filterCategory) => {
         const filterValues = filters[filterCategory];
-        return (
-          filterValues.length === 0 ||
-          filterValues.includes(product[filterCategory])
-        );
+        const productValue = product[filterCategory];
+
+        console.log(`Filter Category: ${filterCategory}`);
+        console.log(`Product Value: ${productValue}`);
+        console.log(`Filter Values: ${filterValues}`);
+
+        if (filterValues.length === 0) {
+          return true;
+        }
+
+        if (filterCategory === "category") {
+          return filterValues.includes(productValue);
+        }
+
+        return true;
       });
     });
   }, [products, filters]);
