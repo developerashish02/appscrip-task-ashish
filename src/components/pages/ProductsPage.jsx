@@ -23,10 +23,10 @@ const ProductsPage = () => {
     <div className="bg-gray-100 min-h-screen font-poppins">
       <main className="p-6 lg:p-8">
         <div className="container mx-auto">
-          <div className="flex justify-between items-center mb-6">
+          <div className="flex flex-col lg:flex-row justify-between items-center mb-6">
             <button
               onClick={() => dispatch(toggleSidebar())}
-              className="bg-gray-800 text-white py-2 px-4 rounded-lg flex items-center hover:bg-gray-700 transition duration-200"
+              className="bg-gray-800 text-white py-2 px-4 rounded-lg flex items-center hover:bg-gray-700 transition duration-200 mb-4 lg:mb-0 lg:mr-4"
             >
               {isVisible ? (
                 <>
@@ -39,7 +39,7 @@ const ProductsPage = () => {
               )}
             </button>
 
-            <h2 className="text-lg font-semibold text-gray-800 flex-grow text-center">
+            <h2 className="text-lg font-semibold text-gray-800 flex-grow text-center mb-4 lg:mb-0">
               ({products?.length}) ITEMS
             </h2>
 
