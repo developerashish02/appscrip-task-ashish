@@ -20,10 +20,6 @@ const ElectronicsPage = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen">
-      <header className="bg-blue-500 text-white p-4">
-        <h1 className="text-3xl font-bold text-center">Electronics</h1>
-      </header>
-
       <main className="p-4">
         <div className="container mx-auto">
           <div className="flex justify-end mb-4">
