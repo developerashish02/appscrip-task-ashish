@@ -5,8 +5,17 @@ const sidebarSlice = createSlice({
   initialState: {
     isVisible: true,
     filters: {
-      idealFor: [], // Keep only this category
-      category: ["men's clothing", "women's clothing"], // You can keep or remove this depending on your need
+      idealFor: [],
+      category: [],
+      occasion: [],
+      fabric: [],
+      segment: [],
+      suitableFor: [],
+      rawMaterials: [],
+      pattern: [],
+      jacketMaterial: [],
+      sleeveLength: [],
+      sleeve: [],
     },
   },
   reducers: {
